@@ -85,3 +85,9 @@ Network configuration was verified using PowerShell and Windows networking utili
 `ipconfig`
 
 Internet connectivity and DNS resolution were also tested from DC01.
+
+### DC01 Network Configuration
+
+The following output verifies the network configuration of the Windows Server:
+
+![DC01 Network Configuration](../screenshots/networking/dc01-networking-config.png)
