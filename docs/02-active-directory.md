@@ -100,3 +100,27 @@ DC01
 &nbsp;&nbsp;&nbsp;&nbsp;└── cyberlab.local
 
 Future phases will introduce domain users, organizational units, security groups, Group Policy, and a Windows client workstation.
+
+## DNS Troubleshooting
+
+During validation, the NAT interface on DC01 registered its dynamically assigned `10.0.2.15` address in the Active Directory DNS zone in addition to the intended internal address of `10.0.0.10`.
+
+Because domain clients should communicate with the domain controller through the isolated CYBER-LAB network, DNS registration was disabled on the `NAT-INTERNET` interface.
+
+The stale `10.0.2.15` Host (A) record was then removed from the `cyberlab.local` DNS zone.
+
+DNS resolution was verified again using:
+
+`nslookup cyberlab.local`
+
+The final configuration successfully resolved the domain using the internal `10.0.0.10` address.
+
+## Evidence
+
+### Active Directory Domain
+
+![Active Directory Domain](../screenshots/active-directory/cyberlab-domain.png)
+
+### DNS Verification
+
+![Active Directory DNS Verification](../screenshots/active-directory/ad-dns-verification.png)
