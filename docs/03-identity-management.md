@@ -137,3 +137,17 @@ This phase demonstrates several identity and access management concepts:
 The next phase of the lab will introduce a Windows client workstation. The workstation will be connected to the isolated `CYBER-LAB` network, configured to use DC01 for DNS, and joined to the `cyberlab.local` domain.
 
 This will allow the employee accounts created during this phase to authenticate from a domain-joined workstation and will provide the foundation for Group Policy testing.
+
+## Evidence
+
+### Active Directory User Verification
+
+The following PowerShell output verifies that the departmental user accounts were successfully created and enabled in Active Directory.
+
+![Active Directory User Verification](../screenshots/active-directory/ad-user-verification.png)
+
+### Security Group Membership Verification
+
+The following PowerShell output verifies that users were assigned to their appropriate departmental security groups.
+
+![Active Directory Group Membership](../screenshots/active-directory/ad-group-membership.png)
